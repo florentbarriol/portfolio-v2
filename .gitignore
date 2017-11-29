@@ -1,0 +1,4 @@
+node_modules/
+
+# folder generate when building for production
+public
