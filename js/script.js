@@ -1,17 +1,24 @@
 /**
  * lazy loading solution by david walsch : Simple Image Lazy Load and Fade [https://davidwalsh.name/lazyload-image-fade]
  */
-(function () {
+function lazyLoadingImg() {
     [].forEach.call(document.querySelectorAll('noscript'), function (noscript) {
         var img = new Image();
         img.setAttribute('data-src', '');
+        img.setAttribute('class', noscript.classList);
         noscript.parentNode.insertBefore(img, noscript);
         img.onload = function () {
             img.removeAttribute('data-src');
         };
         img.src = noscript.getAttribute('data-src');
     });
-})();
+}
+
+if (window.addEventListener) {
+    window.addEventListener("load", lazyLoadingImg, false);
+} else if (window.attachEvent) {
+    window.attachEvent("onload", lazyLoadingImg);
+}
 
 /**
  * To top arrow
