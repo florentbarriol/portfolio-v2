@@ -157,7 +157,7 @@ footer {
 @media screen and (min-width: 480px) {
     .works .card {
         height: 320px;
-        margin-bottom: 30px;
+        margin-bottom: 15px;
     }
     .works {
         justify-content: center;
