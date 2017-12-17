@@ -1,0 +1,9 @@
+{
+    "extends": "stylelint-config-standard",
+    "rules": {
+        "indentation": "4",
+        "max-empty-lines": 2,
+        "unit-whitelist": ["rem", "vh", "px"],
+        "number-leading-zero": null
+    }
+}
