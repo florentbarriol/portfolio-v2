@@ -145,34 +145,29 @@ footer {
 
 /* page work */
 
-.works .card {
+.card {
+    display: block;
+    overflow: hidden;
     margin-bottom: 15px;
     height: 247px;
 }
 
-.card {
-    display: block;
-    overflow: hidden;
-}
-
 @media screen and (min-width: 480px) {
-    .works .card {
+    .card {
+        justify-content: center;
         height: 320px;
         margin-bottom: 15px;
-    }
-    .works {
-        justify-content: center;
     }
 }
 
 @media screen and (max-width: 920px) {
-    .works .card {
+    .card {
         width: 100%;
     }
 }
 
 @media screen and (min-width: 1400px) {
-    .works .card {
+    .card {
         height: 440px;
     }
 }
@@ -213,9 +208,12 @@ footer {
     background-image: url('../img/shopformiles.jpg');
 }
 
-.card:hover figure:after {
-    transform: scale(1.2);
-    filter: grayscale(.5);
+#presentation figure:after {
+    background-image: url('../img/blog/presentation.jpg');
+}
+
+#formationreactredux figure:after {
+    background-image: url('../img/blog/formation-react-redux.jpg');
 }
 
 .card figcaption {
@@ -255,9 +253,15 @@ footer {
     color: #fff;
 }
 
+.articles .card figcaption,
 .card:hover figcaption {
     background: rgba(0, 0, 0, .3);
     opacity: 1;
+}
+
+.card:hover figure:after {
+    transform: scale(1.2);
+    filter: grayscale(.5);
 }
 
 
