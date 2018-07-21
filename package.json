@@ -20,11 +20,11 @@
     "build": "npm run html && npm run img && npm run css && npm run js",
     "prebuild": "echo Building start... && npm run clean",
     "postbuild": "echo Building completed !",
-    "clean": "rm -r -f public && mkdir public && ls",
+    "clean": "rm -r -f public && mkdir public",
     "img": "cp -R img public/img",
     "html": "cp index.html public/ && cp -R work/ public/work",
     "css": "postcss \"css/*.css\" -d public/css",
-    "js": "mkdir public/js && ls && uglifyjs js/script.js -o public/js/script.js -c -m"
+    "js": "mkdir public/js && uglifyjs js/script.js -o public/js/script.js -c -m"
   },
   "dependencies": {
     "autoprefixer": "^7.1.6",
