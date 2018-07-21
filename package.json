@@ -21,7 +21,7 @@
     "prebuild": "echo Building start... && npm run clean",
     "postbuild": "echo Building completed !",
     "clean": "rm -r -f public && mkdir public",
-    "img": "cp -R img public/img",
+    "img": "cp -R img public/img && cp florent_barriol.pdf public",
     "html": "cp index.html public/ && cp -R work/ public/work",
     "css": "postcss \"css/*.css\" -d public/css",
     "js": "mkdir public/js && uglifyjs js/script.js -o public/js/script.js -c -m"
