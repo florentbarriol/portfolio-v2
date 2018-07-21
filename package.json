@@ -18,7 +18,7 @@
   },
   "scripts": {
     "build": "npm run html && npm run img && npm run css && npm run js",
-    "prebuild": "echo Building start... && npm run clean",
+    "prebuild": "echo Building start... && npm run clean && npm run install",
     "postbuild": "echo Building completed !",
     "clean": "rm -r -f public && mkdir public",
     "img": "cp -R img public/img",
